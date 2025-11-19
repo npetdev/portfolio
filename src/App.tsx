@@ -1,3 +1,16 @@
+import React from "react";
+import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
+import Home from "./pages/Home";
+
 export default function App() {
-  return <div>Welcome to my portfolio</div>;
+  return (
+    <>
+      <Header />
+      <main>
+        <Home />
+      </main>
+      <Footer />
+    </>
+  );
 }
