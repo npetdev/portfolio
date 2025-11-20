@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  padding: 24px 0;
+  text-align: center;
+  background-color: #0f172a;
+  color: #cbd5e1;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  .footer__socials {
+    display: flex;
+    gap: 20px;
+
+    a {
+      font-size: 24px;
+      color: #cbd5e1;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: #4f9ef8;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .footer__text {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+  }
+}

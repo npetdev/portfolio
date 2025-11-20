@@ -1,0 +1,35 @@
+.projects {
+  padding: 100px 20px;
+  background-color: #0f172a;
+  color: #fff;
+  text-align: center;
+
+  .projects-content {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .projects-content {
+    h2 {
+      font-size: 2rem;
+    }
+    .projects-grid {
+      gap: 15px;
+    }
+  }
+}

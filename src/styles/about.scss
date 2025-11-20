@@ -1,0 +1,34 @@
+.about {
+  padding: 100px 20px;
+  background-color: #1e293b;
+  color: #fff;
+  text-align: center;
+
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .about-content {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
