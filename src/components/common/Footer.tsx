@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__socials">
         <a
-          href="https://www.linkedin.com/in/npetdev/"
+          href="https://www.linkedin.com/in/nebojsa-petrovic/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -22,7 +22,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/nebojsa.202/"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -8,8 +8,8 @@ export default function SkillsSection() {
     "React Router",
     "Ant Design",
     "SASS/SCSS",
+    "Supabase",
     "Git & GitHub",
-    "Problem Solving (Spine & Posture)",
     "Personal Fitness Training",
     "Kids Fitness Training",
   ];
