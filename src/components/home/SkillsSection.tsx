@@ -1,4 +1,6 @@
 import "../../styles/skills.scss";
+import { motion } from "framer-motion";
+import {staggerSkills, fadeUpSkill } from "../../animations/stagger";
 
 export default function SkillsSection() {
   const skills = [
@@ -16,16 +18,34 @@ export default function SkillsSection() {
 
   return (
     <section id="skills" className="skills">
-      <div className="skills-content">
-        <h2>My Skills</h2>
-        <div className="skills-list">
+      <motion.div
+        className="skills-content"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={staggerSkills}
+      >
+        <motion.h2
+          variants={fadeUpSkill}
+          transition={{ duration: 0.6 }}
+        >
+          My Skills
+        </motion.h2>
+
+        <motion.div className="skills-list" variants={staggerSkills}>
           {skills.map((skill, index) => (
-            <span key={index} className="skill-badge">
+            <motion.span
+              key={index}
+              className="skill-badge"
+              variants={fadeUpSkill}
+              transition={{ duration: 0.4 }}
+              whileHover={{ scale: 1.08 }}
+            >
               {skill}
-            </span>
+            </motion.span>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

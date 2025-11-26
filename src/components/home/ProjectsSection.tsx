@@ -1,5 +1,7 @@
 import "../../styles/projects.scss";
 import ProjectCard from "../../components/project/ProjectCard";
+import { motion } from "framer-motion";
+import { fade, stagger, childFade } from "../../animations";
 
 const projects = [
   {
@@ -8,9 +10,9 @@ const projects = [
     link: "https://ai-fitness-assistant.netlify.app/",
   },
   {
-    title: "Managemet App",
+    title: "Management App",
     description:
-      "Responsive CRUD App, with real time weather Api and JsonPlaceholder Api .",
+      "Responsive CRUD App, with real time weather Api and JsonPlaceholder Api.",
     link: "https://management-weather-app.netlify.app/",
   },
   {
@@ -23,19 +25,38 @@ const projects = [
 export default function ProjectsSection() {
   return (
     <section id="projects" className="projects">
-      <div className="projects-content">
-        <h2>My Projects</h2>
-        <div className="projects-grid">
+      <motion.div
+        className="projects-content"
+        variants={fade}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        <motion.h2
+          variants={fade}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          My Projects
+        </motion.h2>
+
+        <motion.div
+          className="projects-grid"
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              link={project.link}
-            />
+            <motion.div key={index} variants={childFade}>
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                link={project.link}
+              />
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

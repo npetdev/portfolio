@@ -1,18 +1,43 @@
+import { motion } from "framer-motion";
 import "../../styles/hero.scss";
 import { Link } from "react-scroll";
+import { fade, slide } from "../../animations"; 
+
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-content">
-        <h1>Nebojsa Petrovic</h1>
-        <p>React Developer & Personal Fitness Trainer</p>
-      <button className="hero-btn">
-  <Link to="projects" smooth={true} duration={500}>
-    View Projects
-  </Link>
-</button>
-      </div>
+      <motion.div
+        className="hero-content"
+        variants={slide}
+        initial="hidden"
+        animate="show"
+      >
+        <motion.h1
+          variants={fade}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          Nebojsa Petrovic
+        </motion.h1>
+
+        <motion.p
+          variants={fade}
+          transition={{ delay: 0.35, duration: 0.6 }}
+        >
+          React Developer & Personal Fitness Trainer
+        </motion.p>
+
+        <motion.button
+          className="hero-btn"
+          variants={fade}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          <Link to="projects" smooth={true} duration={500}>
+            View Projects
+          </Link>
+        </motion.button>
+      </motion.div>
     </section>
   );
 }
-
