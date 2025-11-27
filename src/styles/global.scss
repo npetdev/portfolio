@@ -1,12 +1,31 @@
-/* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --bg-color: #fff;
+  --bg-color-alt: #f1f5f9;
+  --text-color: #111;
+  --accent-color: #60a5fa;
+  --accent-color-hover: #3b82f6;
+  --btn-text-color: #fff;
+  --input-bg: #fff;
+}
+
+.theme-dark {
+  --bg-color: #0f172a;
+  --bg-color-alt: #1e293b;
+  --text-color: #fff;
+  --accent-color: #60a5fa;
+  --accent-color-hover: #3b82f6;
+  --btn-text-color: #fff;
+  --input-bg: #334155;
+}
 
 body {
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

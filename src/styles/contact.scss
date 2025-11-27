@@ -1,73 +1,97 @@
 .contact {
-  padding: 100px 20px;
-  background-color: #1e293b;
-  color: #fff;
+  background-color: var(--bg-color-alt);
+  padding: 60px 30px;
+  border-radius: 16px;
+  max-width: 650px;
+  margin: 50px auto;
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 
   .contact-content {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
+  }
 
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input,
+    textarea {
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+      resize: none;
+      background-color: var(--input-bg); 
+      color: var(--text-color);
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--text-color);
+      opacity: 0.5;
+    }
 
-      input,
-      textarea {
-        padding: 10px 15px;
-        border-radius: 8px;
-        border: none;
-        font-size: 1rem;
-        resize: none;
-      }
+    input:focus,
+    textarea:focus {
+      outline: 2px solid var(--accent-color);
+    }
 
-      input:focus,
-      textarea:focus {
-        outline: 2px solid #60a5fa;
-      }
+    .contact-btn {
+      padding: 0.8rem 2rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      border: 2px solid var(--accent-color);
+      background-color: var(--bg-color); 
+      color: var(--accent-color);
+      cursor: pointer;
+      transition: all 0.3s ease;
 
-      .contact-btn {
-        padding: 0.8rem 2rem;
-        background-color: #60a5fa;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: #3b82f6;
-        }
+      &:hover {
+        background-color: var(--accent-color);
+        color: var(--btn-text-color);
+        border-color: var(--accent-color-hover);
       }
     }
   }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  }
 }
 
-// Responsive
 @media (max-width: 768px) {
-  .contact-content {
+  .contact {
+    padding: 40px 20px;
+
     h2 {
       font-size: 2rem;
     }
 
     .contact-form {
-      gap: 10px;
+      gap: 12px;
 
       input,
       textarea {
-        font-size: 0.9rem;
-        padding: 8px 12px;
+        font-size: 0.95rem;
+        padding: 10px 12px;
       }
 
       .contact-btn {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        padding: 0.7rem 1.5rem;
       }
     }
   }

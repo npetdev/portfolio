@@ -1,8 +1,9 @@
 .projects {
   padding: 100px 20px;
-  background-color: #0f172a;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   .projects-content {
     max-width: 1000px;
@@ -11,6 +12,7 @@
     h2 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
+      color: var(--text-color);
     }
 
     .projects-grid {
@@ -18,18 +20,62 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+
+      .project-card {
+        background-color: var(--bg-color-alt);
+        color: var(--text-color);
+        padding: 20px;
+        border-radius: 12px;
+        width: 250px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          color: var(--accent-color);
+        }
+
+        p {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+          color: var(--text-color);
+        }
+
+        .project-link {
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          background-color: var(--accent-color);
+          color: var(--btn-text-color);
+          border-radius: 8px;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: var(--accent-color-hover);
+          }
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+      }
     }
   }
 }
-
-// Responsive
 @media (max-width: 768px) {
   .projects-content {
     h2 {
       font-size: 2rem;
     }
+
     .projects-grid {
       gap: 15px;
+
+      .project-card {
+        width: 100%;
+      }
     }
   }
 }

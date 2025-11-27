@@ -1,8 +1,9 @@
 .skills {
   padding: 100px 20px;
-  background-color: #0f172a;
-  color: #fff;
+  background-color: var(--bg-color-alt);
+  color: var(--text-color);
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   .skills-content {
     max-width: 900px;
@@ -11,6 +12,7 @@
     h2 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
+      color: var(--text-color);
     }
 
     .skills-list {
@@ -20,14 +22,16 @@
       gap: 15px;
 
       .skill-badge {
-        background-color: #1e293b;
+        background-color: var(--bg-color);
+        color: var(--text-color);
         padding: 0.5rem 1rem;
         border-radius: 8px;
         font-size: 1rem;
         transition: all 0.3s ease;
 
         &:hover {
-          background-color: #3b82f6;
+          background-color: var(--accent-color);
+          color: var(--btn-text-color);
           cursor: default;
         }
       }
@@ -35,7 +39,6 @@
   }
 }
 
-// Responsive
 @media (max-width: 768px) {
   .skills-content {
     h2 {

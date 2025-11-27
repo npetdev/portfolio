@@ -1,3 +1,14 @@
+export const staggerHeader = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+
 export const stagger = {
   hidden: { opacity: 0 },
   show: {
