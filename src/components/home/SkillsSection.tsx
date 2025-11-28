@@ -5,15 +5,16 @@ import {staggerSkills, fadeUpSkill } from "../../animations/stagger";
 export default function SkillsSection() {
   const skills = [
     "React",
+    "Javascript",
     "TypeScript",
     "Redux",
     "React Router",
+    "Axios",
+    "Framer Motion",
     "Ant Design",
     "SASS/SCSS",
     "Supabase",
-    "Git & GitHub",
-    "Personal Fitness Training",
-    "Kids Fitness Training",
+    "Git & GitHub"
   ];
 
   return (

@@ -12,7 +12,7 @@ const projects = [
   {
     title: "Management App",
     description:
-      "Responsive CRUD App, with real time weather Api and JsonPlaceholder Api.",
+      "Responsive CRUD App, with real time weather Api.",
     link: "https://management-weather-app.netlify.app/",
   },
   {
