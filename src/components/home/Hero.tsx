@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import "../../styles/hero.scss";
+import MyPhoto from "../../assets/images/myphoto.png";
 import { Link } from "react-scroll";
 import { fade, slide } from "../../animations"; 
 
@@ -12,6 +13,13 @@ export default function Hero() {
         initial="hidden"
         animate="show"
       >
+        <motion.img
+          src={MyPhoto}
+          alt="Nebojsa Petrovic"
+          className="hero-photo"
+          variants={fade}
+          transition={{ delay: 0.1, duration: 0.6 }}
+        />
         <motion.h1
           variants={fade}
           transition={{ delay: 0.2, duration: 0.6 }}
