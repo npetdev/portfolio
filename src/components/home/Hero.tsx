@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import "../../styles/hero.scss";
-import MyPhoto from "../../assets/images/myphoto.png";
+import MyPhoto from "../../assets/images/Myphoto.png";
 import { Link } from "react-scroll";
 import { fade, slide } from "../../animations"; 
 
