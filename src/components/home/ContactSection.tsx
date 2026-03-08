@@ -43,9 +43,6 @@ const ContactSection: React.FC = () => {
   };
 
   const itemVariants = fadeUpSkill;
-console.log("Service ID:", import.meta.env.VITE_SERVICE_ID);
-console.log("Template ID:", import.meta.env.VITE_TEMPLATE_ID);
-console.log("Public Key:", import.meta.env.VITE_PUBLIC_KEY);
   return (
     <section id="contact" className="contact">
       <motion.div
@@ -56,7 +53,6 @@ console.log("Public Key:", import.meta.env.VITE_PUBLIC_KEY);
         variants={containerVariants}
       >
         <motion.h2 variants={itemVariants}>Contact Me</motion.h2>
-
         <motion.form
           ref={form}
           onSubmit={sendEmail}
