@@ -9,27 +9,25 @@ The goal of this project is to present my skills, projects, and experience.
 - **TypeScript**
 - **Vite**
 - **SCSS / Sass**
-- **React Router**
-- **Ant Design** (planned)
-- **Framer Motion** (planned for animations)
+- **Framer Motion**
+- **EmailJS**
 
 ## 📂 Project Structure
 
 Folder structure:
 
 src/
+├── animations
 ├── assets/ # images, icons
 ├── components/ # UI + common + home + project components
-├── pages/ # route pages
-├── data/ # skills and project data
-├── hooks/ # custom hooks
-├── context/ # context providers
+├── context/ # theme context provider
+├── pages/ # home page 
 ├── styles/ # global styles, mixins, variables
 ├── App.tsx
 └── main.tsx
 
 
-## 🎯 Features (to be added)
+## 🎯 Features
 
 - Modern hero section  
 - About me section  
@@ -53,5 +51,5 @@ npm run dev
 
 ## 📬 Contact
 
-If you want to reach me, you can contact me via **LinkedIn** or the **contact form** (coming soon).
+If you want to reach me, you can contact me via **https://www.linkedin.com/in/nebojsa-petrovic/** or the **contact form**.
 
